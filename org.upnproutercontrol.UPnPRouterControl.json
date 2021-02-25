@@ -35,7 +35,7 @@
             {
                "type":"git",
                "url":"https://git.launchpad.net/upnp-router-control",
-               "commit":"50e859f453b397b19924a53a6c3ee7d0a0f45f20"
+               "commit":"222f5627528a8b4ad7fd1c4f7d0751043ebb4f3b"
             }
          ],
          "modules":[
