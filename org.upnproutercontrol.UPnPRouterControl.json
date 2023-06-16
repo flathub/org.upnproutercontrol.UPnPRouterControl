@@ -2,7 +2,7 @@
    "app-id":"org.upnproutercontrol.UPnPRouterControl",
    "branch":"stable",
    "runtime":"org.gnome.Platform",
-   "runtime-version":"40",
+   "runtime-version":"44",
    "sdk":"org.gnome.Sdk",
    "command":"upnp-router-control",
    "rename-desktop-file":"upnp-router-control.desktop",
@@ -13,37 +13,25 @@
    ],
    "modules":[
       {
-         "name":"intltool",
-         "sources":[
-            {
-               "type":"archive",
-               "url":"https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz",
-               "md5":"12e517cac2b57a0121cda351570f1e63"
-            }
-         ],
-         "cleanup":[
-            "*"
-         ]
-      },
-      {
          "name":"upnp-router-control",
-         "buildsystem":"autotools",
+         "buildsystem":"meson",
          "sources":[
             {
                "type":"git",
-               "url":"https://git.launchpad.net/upnp-router-control",
-               "commit":"9a3a55e8c41c5f1d3503aeff0da28bb149476d94"
+               "url":"https://gitlab.gnome.org/DnaX/upnp-router-control.git",
+               "commit":"88f81488d903308c21ffa5bd4ce6567d10155c4a"
             }
          ],
          "modules":[
             {
                "name":"libgssdp",
                "buildsystem":"meson",
+               "config-opts": [ "-Dintrospection=false", "-Dexamples=false", "-Dsniffer=false" ],
                "sources":[
                   {
                      "type":"git",
                      "url":"https://gitlab.gnome.org/GNOME/gssdp.git",
-                     "tag":"gssdp-1.2.3"
+                     "tag":"gssdp-1.6.0"
                   }
                ],
                "cleanup":[
@@ -53,11 +41,12 @@
             {
                "name":"libgupnp",
                "buildsystem":"meson",
+               "config-opts": [ "-Dintrospection=false", "-Dexamples=false" ],
                "sources":[
                   {
                      "type":"git",
                      "url":"https://gitlab.gnome.org/GNOME/gupnp.git",
-                     "tag":"gupnp-1.2.3"
+                     "tag":"gupnp-1.6.0"
                   }
                ],
                "cleanup":[
