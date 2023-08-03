@@ -19,7 +19,7 @@
             {
                "type":"git",
                "url":"https://gitlab.gnome.org/DnaX/upnp-router-control.git",
-               "commit":"88f81488d903308c21ffa5bd4ce6567d10155c4a"
+               "commit":"3ee42547201ddf69de4198e9f2c2e34fb985c7af"
             }
          ],
          "modules":[
