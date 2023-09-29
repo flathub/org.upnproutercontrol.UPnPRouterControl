@@ -41,7 +41,7 @@
             {
                "name":"libgupnp",
                "buildsystem":"meson",
-               "config-opts": [ "-Dintrospection=false", "-Dexamples=false", "-Dmanpages=false", "-Dgtk_doc=false" ],
+               "config-opts": [ "-Dintrospection=false", "-Dexamples=false", "-Dgtk_doc=false" ],
                "sources":[
                   {
                      "type":"git",
