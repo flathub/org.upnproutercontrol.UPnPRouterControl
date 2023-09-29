@@ -31,7 +31,7 @@
                   {
                      "type":"git",
                      "url":"https://gitlab.gnome.org/GNOME/gssdp.git",
-                     "tag":"gssdp-1.6.0"
+                     "tag":"gssdp-1.6.2"
                   }
                ],
                "cleanup":[
@@ -46,7 +46,7 @@
                   {
                      "type":"git",
                      "url":"https://gitlab.gnome.org/GNOME/gupnp.git",
-                     "tag":"gupnp-1.6.0"
+                     "tag":"gupnp-1.6.3"
                   }
                ],
                "cleanup":[
