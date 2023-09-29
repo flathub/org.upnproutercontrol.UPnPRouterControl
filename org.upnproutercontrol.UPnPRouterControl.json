@@ -26,7 +26,7 @@
             {
                "name":"libgssdp",
                "buildsystem":"meson",
-               "config-opts": [ "-Dintrospection=false", "-Dexamples=false", "-Dsniffer=false" ],
+               "config-opts": [ "-Dintrospection=false", "-Dexamples=false", "-Dsniffer=false", "-Dmanpages=false", "-Dgtk_doc=false" ],
                "sources":[
                   {
                      "type":"git",
@@ -41,7 +41,7 @@
             {
                "name":"libgupnp",
                "buildsystem":"meson",
-               "config-opts": [ "-Dintrospection=false", "-Dexamples=false" ],
+               "config-opts": [ "-Dintrospection=false", "-Dexamples=false", "-Dmanpages=false", "-Dgtk_doc=false" ],
                "sources":[
                   {
                      "type":"git",
