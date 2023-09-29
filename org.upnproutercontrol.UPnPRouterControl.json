@@ -19,19 +19,19 @@
             {
                "type":"git",
                "url":"https://gitlab.gnome.org/DnaX/upnp-router-control.git",
-               "commit":"3ee42547201ddf69de4198e9f2c2e34fb985c7af"
+               "commit":"84ba4e74f7a098c827b405af0100c8d959f8ea89"
             }
          ],
          "modules":[
             {
                "name":"libgssdp",
                "buildsystem":"meson",
-               "config-opts": [ "-Dintrospection=false", "-Dexamples=false", "-Dsniffer=false" ],
+               "config-opts": [ "-Dintrospection=false", "-Dexamples=false", "-Dsniffer=false", "-Dmanpages=false", "-Dgtk_doc=false" ],
                "sources":[
                   {
                      "type":"git",
                      "url":"https://gitlab.gnome.org/GNOME/gssdp.git",
-                     "tag":"gssdp-1.6.0"
+                     "tag":"gssdp-1.6.2"
                   }
                ],
                "cleanup":[
@@ -41,12 +41,12 @@
             {
                "name":"libgupnp",
                "buildsystem":"meson",
-               "config-opts": [ "-Dintrospection=false", "-Dexamples=false" ],
+               "config-opts": [ "-Dintrospection=false", "-Dexamples=false", "-Dgtk_doc=false" ],
                "sources":[
                   {
                      "type":"git",
                      "url":"https://gitlab.gnome.org/GNOME/gupnp.git",
-                     "tag":"gupnp-1.6.0"
+                     "tag":"gupnp-1.6.3"
                   }
                ],
                "cleanup":[
