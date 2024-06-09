@@ -11,6 +11,11 @@
       "--socket=fallback-x11",
       "--socket=wayland"
    ],
+   "cleanup":[
+      "/include",
+      "/lib/pkgconfig",
+      "/share/man"
+   ],
    "modules":[
       {
          "name":"upnp-router-control",
