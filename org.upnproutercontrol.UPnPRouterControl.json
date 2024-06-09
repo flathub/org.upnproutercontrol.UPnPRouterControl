@@ -2,7 +2,7 @@
    "app-id":"org.upnproutercontrol.UPnPRouterControl",
    "branch":"stable",
    "runtime":"org.gnome.Platform",
-   "runtime-version":"44",
+   "runtime-version":"46",
    "sdk":"org.gnome.Sdk",
    "command":"upnp-router-control",
    "rename-desktop-file":"upnp-router-control.desktop",
@@ -31,7 +31,7 @@
                   {
                      "type":"git",
                      "url":"https://gitlab.gnome.org/GNOME/gssdp.git",
-                     "tag":"gssdp-1.6.2"
+                     "tag":"gssdp-1.6.3"
                   }
                ],
                "cleanup":[
@@ -46,7 +46,7 @@
                   {
                      "type":"git",
                      "url":"https://gitlab.gnome.org/GNOME/gupnp.git",
-                     "tag":"gupnp-1.6.3"
+                     "tag":"gupnp-1.6.6"
                   }
                ],
                "cleanup":[
