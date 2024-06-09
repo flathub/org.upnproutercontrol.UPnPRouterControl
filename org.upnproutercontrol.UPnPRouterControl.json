@@ -56,6 +56,10 @@
                "url":"https://gitlab.gnome.org/DnaX/upnp-router-control.git",
                "tag": "0.3.4",
                "commit":"84ba4e74f7a098c827b405af0100c8d959f8ea89"
+            },
+            {
+               "type":"patch",
+               "path":"fix_appdata.patch"
             }
          ]
       }
