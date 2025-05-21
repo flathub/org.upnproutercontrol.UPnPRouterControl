@@ -1,67 +1,87 @@
 {
-   "app-id":"org.upnproutercontrol.UPnPRouterControl",
-   "branch":"stable",
-   "runtime":"org.gnome.Platform",
-   "runtime-version":"46",
-   "sdk":"org.gnome.Sdk",
-   "command":"upnp-router-control",
-   "rename-desktop-file":"upnp-router-control.desktop",
-   "finish-args":[
-      "--share=network",
-      "--socket=fallback-x11",
-      "--socket=wayland"
-   ],
-   "cleanup":[
-      "/include",
-      "/lib/pkgconfig",
-      "/share/man"
-   ],
-   "modules":[
-      {
-         "name":"libgssdp",
-         "buildsystem":"meson",
-         "config-opts": [ "-Dintrospection=false", "-Dexamples=false", "-Dsniffer=false", "-Dmanpages=false", "-Dgtk_doc=false" ],
-         "sources":[
-            {
-               "type":"git",
-               "url":"https://gitlab.gnome.org/GNOME/gssdp.git",
-               "tag":"gssdp-1.6.3"
-            }
-         ],
-         "cleanup":[
-            "/bin"
-         ]
-      },
-      {
-         "name":"libgupnp",
-         "buildsystem":"meson",
-         "config-opts": [ "-Dintrospection=false", "-Dexamples=false", "-Dgtk_doc=false" ],
-         "sources":[
-            {
-               "type":"git",
-               "url":"https://gitlab.gnome.org/GNOME/gupnp.git",
-               "tag":"gupnp-1.6.6"
-            }
-         ],
-         "cleanup":[
-            "/bin"
-         ]
-      },
-      {
-         "name":"upnp-router-control",
-         "buildsystem":"meson",
-         "sources":[
-            {
-               "type":"git",
-               "url":"https://gitlab.gnome.org/DnaX/upnp-router-control.git",
-               "tag": "0.3.4",
-               "commit":"84ba4e74f7a098c827b405af0100c8d959f8ea89"
-            },
-            {
-               "type":"patch",
-               "path":"fix_appdata.patch"
-            }
-         ]
-      }
-   ]
+    "app-id": "org.upnproutercontrol.UPnPRouterControl",
+    "branch": "stable",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "48",
+    "sdk": "org.gnome.Sdk",
+    "command": "upnp-router-control",
+    "finish-args": [
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--socket=dri",
+        "--share=ipc"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/man",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "*.la",
+        "*.a"
+    ],
+    "modules": [
+        {
+            "name": "upnp-router-control",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/DnaX/upnp-router-control.git",
+                    "tag": "0.3.5",
+                    "commit": "433789c4c77036004de4a8f015802b0fcddc9ee9"
+                },
+                {
+                    "type": "patch",
+                    "path": "fix_appdata.patch"
+                }
+            ],
+            "modules": [
+                {
+                    "name": "libgssdp",
+                    "builddir": true,
+                    "buildsystem": "meson",
+                    "config-opts": [
+                        "-Dintrospection=false",
+                        "-Dexamples=false",
+                        "-Dsniffer=false",
+                        "-Dmanpages=false",
+                        "-Dgtk_doc=false"
+                    ],
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://gitlab.gnome.org/GNOME/gssdp.git",
+                            "tag": "gssdp-1.6.3"
+                        }
+                    ],
+                    "cleanup": [
+                        "/bin"
+                    ]
+                },
+                {
+                    "name": "libgupnp",
+                    "builddir": true,
+                    "buildsystem": "meson",
+                    "config-opts": [
+                        "-Dintrospection=false",
+                        "-Dexamples=false"
+                    ],
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://gitlab.gnome.org/GNOME/gupnp.git",
+                            "tag": "gupnp-1.6.7"
+                        }
+                    ],
+                    "cleanup": [
+                        "/bin"
+                    ]
+                }
+            ]
+        }
+    ]
 }
