@@ -19,27 +19,6 @@ index c8cd4a1..515e714 100644
 +  <url type="vcs-browser">https://gitlab.gnome.org/DnaX/upnp-router-control</url>
    <url type="translate">https://translations.launchpad.net/upnp-router-control</url>
    <url type="donation">https://liberapay.com/UPnPRouterControl/donate</url>
- 
-@@ -41,7 +42,6 @@
-   <update_contact>dnax88@gmail.com</update_contact>
-   <developer_name>Daniele Napolitano</developer_name>
- 
--  <project_group>GNOME</project_group>
-   <translation type="gettext">upnp-router-control</translation>
- 
-   <content_rating type="oars-1.1"/>
-@@ -172,9 +172,9 @@
- 
-     <release version="0.1" date="2010-02-09">
- 
--      <descritpion>
-+      <description>
-         <p>First release. Basic port forwarding management.</p>
--      </descritpion>
-+      </description>
- 
-       <url>https://launchpad.net/upnp-router-control/trunk/0.1</url>
- 
+
 --
 libgit2 1.7.2
-
