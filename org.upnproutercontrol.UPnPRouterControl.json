@@ -9,7 +9,7 @@
         "--share=network",
         "--socket=fallback-x11",
         "--socket=wayland",
-        "--socket=dri",
+        "--device=dri",
         "--share=ipc"
     ],
     "cleanup": [
